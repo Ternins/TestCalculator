@@ -1,16 +1,27 @@
-import java.util.Scanner;
-
-
 public class RomanConvertor {
     static int num = 0;
     static String romanNum;
-    static Scanner scanner = new Scanner(System.in);
 
-    public static int getNum() {
-        System.out.println("Введите число:");
-        if(scanner.hasNext())
-            romanNum = scanner.nextLine();
-        switch (romanNum){
+    public static boolean isThisRomanNum(String input){
+        boolean thatRoman;
+        switch (input){
+            case "I": thatRoman = true; break;
+            case "II": thatRoman = true; break;
+            case "III": thatRoman = true; break;
+            case "IV": thatRoman = true; break;
+            case "V": thatRoman = true; break;
+            case "VI": thatRoman = true; break;
+            case "VII": thatRoman = true; break;
+            case "VIII": thatRoman = true; break;
+            case "IX": thatRoman = true; break;
+            case "X": thatRoman = true; break;
+            default: thatRoman = false; break;
+        }
+        return thatRoman;
+    }
+
+    public static int getNum(String input) {
+        switch (input){
             case "I": num = 1; break;
             case "II": num = 2; break;
             case "III": num = 3; break;
@@ -21,7 +32,6 @@ public class RomanConvertor {
             case "VIII": num = 8; break;
             case "IX": num = 9; break;
             case "X": num = 10; break;
-            default: System.out.println("Неверный символ! Введите римское число!"); getNum(); break;
         }
         return num;
     }
@@ -38,9 +48,17 @@ public class RomanConvertor {
             case 8: romanNum = "VIII"; break;
             case 9: romanNum = "IX"; break;
             case 10: romanNum = "X"; break;
-            default: System.out.println("Ошибка"); getRomanNum(exoNum); break;
+            case 11: romanNum = "XI"; break;
+            case 12: romanNum = "XII"; break;
+            case 13: romanNum = "XIII"; break;
+            case 14: romanNum = "XIV"; break;
+            case 15: romanNum = "XV"; break;
+            case 16: romanNum = "XVI"; break;
+            case 17: romanNum = "XVII"; break;
+            case 18: romanNum = "XVIII"; break;
+            case 19: romanNum = "XIX"; break;
+            case 20: romanNum = "XX"; break;
         }
         return romanNum;
     }
 }
-
