@@ -13,8 +13,6 @@ public class Calculator {
     static String[] subString;
 
     public static String getExpression() {
-        check1 = false;
-        check2 = false;
         System.out.println("Input:");
         Scanner scan = new Scanner(System.in);
         expression = scan.nextLine();
@@ -32,7 +30,17 @@ public class Calculator {
             num2 = RomanConvertor.getNum(subString[2]);
         } else {
             num1 = Integer.parseInt(subString[0]);
+            if (num1 > 10)
+            {
+                System.out.println("throws Exception");
+                Calculator.getExpression();
+            }
             num2 = Integer.parseInt(subString[2]);
+            if (num2 > 10)
+            {
+                System.out.println("throws Exception");
+                Calculator.getExpression();
+            }
         }
         resultInt = Calculator.calc(num1, num2, operation);
         if(Calculator.check(check1,check2) == true && resultInt < 0){
