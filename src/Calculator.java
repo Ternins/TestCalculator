@@ -35,8 +35,18 @@ public class Calculator {
                 System.out.println("throws Exception");
                 Calculator.getExpression();
             }
+            if (num1 < 1)
+            {
+                System.out.println("throws Exception");
+                Calculator.getExpression();
+            }
             num2 = Integer.parseInt(subString[2]);
             if (num2 > 10)
+            {
+                System.out.println("throws Exception");
+                Calculator.getExpression();
+            }
+            if (num2 < 1)
             {
                 System.out.println("throws Exception");
                 Calculator.getExpression();
