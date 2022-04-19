@@ -19,7 +19,7 @@ public class Calculator {
         subString = expression.split(delimeter);
         if(subString.length > 3 || subString.length < 2){
             System.out.println("throws Exception");
-            Calculator.getExpression();
+            Runtime.getRuntime().exit(0);
         }
         check1 = RomanConvertor.isThisRomanNum(subString[0]);
         check2 = RomanConvertor.isThisRomanNum(subString[2]);
@@ -33,29 +33,29 @@ public class Calculator {
             if (num1 > 10)
             {
                 System.out.println("throws Exception");
-                Calculator.getExpression();
+                Runtime.getRuntime().exit(0);
             }
             if (num1 < 1)
             {
                 System.out.println("throws Exception");
-                Calculator.getExpression();
+                Runtime.getRuntime().exit(0);
             }
             num2 = Integer.parseInt(subString[2]);
             if (num2 > 10)
             {
                 System.out.println("throws Exception");
-                Calculator.getExpression();
+                Runtime.getRuntime().exit(0);
             }
             if (num2 < 1)
             {
                 System.out.println("throws Exception");
-                Calculator.getExpression();
+                Runtime.getRuntime().exit(0);
             }
         }
         resultInt = Calculator.calc(num1, num2, operation);
         if(Calculator.check(check1,check2) == true && resultInt < 0){
             System.out.println("throws Exception");
-            Calculator.getExpression();
+            Runtime.getRuntime().exit(0);
         } else if (Calculator.check(check1,check2) == true){
             globalResult = RomanConvertor.getRomanNum((resultInt));
         } else globalResult = Integer.toString(resultInt);
@@ -78,10 +78,10 @@ public class Calculator {
         boolean flag3 = false;
         if (flag1 == false && flag2 == true) {
             System.out.println("throws Exception");
-            Calculator.getExpression();
+            Runtime.getRuntime().exit(0);
         } else if (flag1 == true  && flag2 == false) {
             System.out.println("throws Exception");
-            Calculator.getExpression();
+            Runtime.getRuntime().exit(0);
         } else if ((flag1 && flag2) == true){
             flag3 = true;
         } else if ((flag1 && flag2) == false) {
